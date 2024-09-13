@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amakipkip Math Game</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="gp.js"></script>
+</head>
+<body style="url(assets/jpg) ">
+    <div class="container">
+        <header>
+            <h1>Quick Math Game</h1>
+            <div class="score-timer">
+                <div id="score">Score: 0</div>
+                <div id="timer">Time: 30s</div>
+            </div>
+        </header>
+        <main>
+             <div class="game-area">
+                 <div id="question" class="question"></div>
+                 <input type="number" id="answer" placeholder="Enter your answer" class="input-field">
+                 <button onclick="checkAnswer()" class="submit-btn">Submit</button>
+                 <div id="result" class="result"></div>
+             </div> 
+            <div id="game-over" class="game-over hidden">
+                 <h2>Game Over!</h2>
+                 <p id="final-score">Final Score: 0</p>
+                 <button onclick="restartGame()" class="restart-btn">Restart</button>
+             </div>
+        </main>
+        <footer>
+             <p>&copy; 2023 Awesome Math Game. All rights reserved.</p>
+        </footer>
+        <audio id="correct-sound" src="correct.mp3"></audio>
+        <audio id="incorrect-sound" src="incorrect.mp3"></audio>
+           
+    </div>  
+</body>
+</html>
